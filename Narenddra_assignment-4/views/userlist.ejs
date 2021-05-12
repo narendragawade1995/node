@@ -1,0 +1,22 @@
+<html>
+    <%-include('./header')%>
+    <body>
+        <div class="container">
+            <table class="table table-dark mt-5">
+                <tr>
+                    <th scope="col">Sr.No</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                  </tr>
+            <% products.forEach(function(item,index){ %>
+                <tr>
+                    <th scope="col"><%= index + 1 %></th>
+                    <th scope="col"><%=item.username%></th>
+                    <th scope="col"><%=item.email%></th>
+                    <th scope="col"><%=item.password%></th>
+                  </tr>
+                <%});%>
+            </table>
+    </body>
+</html>
